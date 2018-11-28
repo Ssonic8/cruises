@@ -1,3 +1,181 @@
+@charset "UTF-8";
+
+.catalog__title {
+  text-align: center;
+  margin-top: 110px;
+  margin-bottom: 30px;
+}
+
+.catalog__title h2 {
+  margin-bottom: 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 48px;
+  letter-spacing: 0.05em;
+}
+
+.catalog__title p {
+  display: inline-block;
+  position: relative;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.catalog__sort-toggle {
+  cursor: pointer;
+  padding-right: 10px;
+}
+
+.catalog__sort-toggle::after {
+  border: medium solid transparent;
+  content: '';
+  top: 7px;
+  right: -5px;
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-color: #0d3351 transparent transparent;
+  border-width: 4px;
+  margin-left: -4px;
+}
+
+.catalog__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding-left: 10px;
+}
+
+.catalog__item {
+  position: relative;
+  margin-bottom: 20px;
+  background-color: #fff;
+  max-width: 555px;
+}
+
+.catalog__item img {
+  width: 100%;
+  height: auto;
+}
+
+.catalog__item-content {
+  margin-left: 35px;
+}
+
+.catalog__item-content p {
+  margin: 0;
+}
+
+.catalog__item-title {
+  margin: 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 48px;
+}
+
+.catalog__item-title a {
+  position: relative;
+  display: inline-block;
+  color: #00a2dd;
+  padding-right: 20px;
+}
+
+.catalog__item-title a::after {
+  border: medium solid transparent;
+  content: '';
+  bottom: 18px;
+  right: -5px;
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-color: transparent transparent transparent #00a2dd;
+  border-width: 4px;
+  margin-left: -4px;
+}
+
+.catalog__item-price {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 48px;
+}
+
+.catalog__item-price--crossed {
+  margin-left: 20px;
+  font-size: 18px;
+  text-decoration: line-through;
+  opacity: 0.55;
+}
+
+.catalog__item--hit::after {
+  position: absolute;
+  content: 'Хит продаж';
+  text-align: center;
+  padding-top: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  width: 89px;
+  height: 101px;
+  top: -7px;
+  right: 45px;
+  background: url("../img/catalog/tag-hit.png") 0 0 no-repeat;
+}
+
+.catalog__item--action::after {
+  position: absolute;
+  content: 'Акция';
+  text-align: center;
+  padding-top: 30px;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  width: 89px;
+  height: 101px;
+  top: -7px;
+  right: 45px;
+  background: url("../img/catalog/tag-action.png") 0 0 no-repeat;
+}
+
+.catalog__item--discount::after {
+  position: absolute;
+  content: 'Скидка 10%';
+  text-align: center;
+  padding-top: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  width: 89px;
+  height: 101px;
+  top: -7px;
+  right: 45px;
+  background: url("../img/catalog/tag-discount.png") 0 0 no-repeat;
+}
+
+.catalog__button {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.catalog__button a {
+  position: relative;
+  display: inline-block;
+}
+
+.catalog__button a::after {
+  border: medium solid transparent;
+  content: '';
+  top: 25px;
+  right: 24px;
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-color: #fff transparent transparent;
+  border-width: 5px;
+  margin-left: -5px;
+}
 .page-header {
   background: #fff url("../img/header/header-bg.jpg") center no-repeat;
   background-size: auto 100%;
@@ -195,9 +373,13 @@
 }
 body {
   margin: 0;
+  background-color: #f3f3f3;
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
   color: #0d3351;
+  letter-spacing: 0.05em;
 }
 
 a {

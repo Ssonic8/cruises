@@ -1,0 +1,139 @@
+.catalog
+	&__title
+	 text-align: center
+	 margin-top: 110px
+	 margin-bottom: 30px
+	 & h2
+	 	margin-bottom: 0
+	  font-family: 'Roboto Slab', serif
+	  font-size: 36px
+	  font-weight: normal 
+	  line-height: 48px
+	  letter-spacing: 0.05em	  
+	 & p
+	 	display: inline-block
+	  position: relative
+	  margin-top: 5px
+	  font-size: 14px
+	&__sort-toggle
+	 cursor: pointer
+	 padding-right: 10px
+	 &::after
+   border: medium solid transparent
+	  content: ''
+	  top: 7px
+	  right: -5px
+	  position: absolute
+	  height: 0
+	  width: 0
+	  border-color: #0d3351 transparent transparent
+	  border-width: 4px
+	  margin-left: -4px
+	&__list
+	 display: flex
+	 flex-wrap: wrap
+	 justify-content: space-between
+	 list-style: none
+	 padding-left: 10px
+	&__item
+	 position: relative
+	 margin-bottom: 20px
+	 background-color: #fff
+	 max-width: 555px
+		& img
+		 width: 100%
+		 height: auto
+	 &-content
+	  margin-left: 35px
+	  & p
+			 margin: 0
+	 &-title
+	  margin: 0
+	  font-family: 'Roboto Slab', serif
+	  font-size: 18px
+	  font-weight: 400
+	  line-height: 48px
+	  & a
+	   position: relative
+	   display: inline-block
+	   color: #00a2dd
+	   padding-right: 20px
+	   &::after
+	    border: medium solid transparent
+			  content: ''
+			  bottom: 18px
+			  right: -5px
+			  position: absolute
+			  height: 0
+			  width: 0
+			  border-color: transparent transparent transparent #00a2dd
+			  border-width: 4px
+			  margin-left: -4px		
+	 &-price
+	  padding-top: 20px
+	  padding-bottom: 10px
+	  font-family: 'Roboto Slab', serif
+	  font-size: 30px
+	  font-weight: 400
+	  line-height: 48px
+	  &--crossed
+	   margin-left: 20px
+	   font-size: 18px
+	   text-decoration: line-through
+	   opacity: 0.55
+	 &--hit::after
+	  position: absolute
+	  content: 'Хит продаж'
+	  text-align: center
+	  padding-top: 20px
+	  color: rgba(255, 255, 255, 0.8)
+	  text-transform: uppercase
+	  width: 89px
+	  height: 101px
+	  top: -7px
+	  right: 45px
+	  background: url('../img/catalog/tag-hit.png') 0 0 no-repeat
+		&--action::after
+	  position: absolute
+	  content: 'Акция'
+	  text-align: center
+	  padding-top: 30px
+	  color: rgba(255, 255, 255, 0.8)
+	  text-transform: uppercase
+	  width: 89px
+	  height: 101px
+	  top: -7px
+	  right: 45px
+	  background: url('../img/catalog/tag-action.png') 0 0 no-repeat
+	 &--discount::after
+	  position: absolute
+	  content: 'Скидка 10%'
+	  text-align: center
+	  padding-top: 20px
+	  color: rgba(255, 255, 255, 0.8)
+	  text-transform: uppercase
+	  width: 89px
+	  height: 101px
+	  top: -7px
+	  right: 45px
+	  background: url('../img/catalog/tag-discount.png') 0 0 no-repeat
+	&__button
+	 text-align: center
+	 margin-bottom: 60px
+	 & a
+	  position: relative	
+	  display: inline-block
+		 &::after
+	   border: medium solid transparent
+		  content: ''
+		  top: 25px
+		  right: 24px
+		  position: absolute
+		  height: 0
+		  width: 0
+		  border-color: #fff transparent transparent
+		  border-width: 5px
+		  margin-left: -5px     
+
+
+
