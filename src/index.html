@@ -11,10 +11,12 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&amp;subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" href="css/raleway.css">
 	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
 	<!-- <link rel="stylesheet" href="css/bootstrap-grid.min.css"> -->
 
 	<link href="css/normalize.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/style.css">
  
 </head>
 <body>
@@ -86,19 +88,23 @@
 			</div>			
 			<ul class="catalog__list">
 					<li class="catalog__item catalog__item--hit">
-						<img src="img/catalog/lighthouse.jpg" alt="Анапа">
+						<div class="catalog__item-img">							
+							<img src="img/catalog/lighthouse.jpg" alt="Анапа">
+						</div>
 						<div class="catalog__item-content">
-							<h3 class="catalog__item-title"><a href="#">Морской круиз в Анапу</a></h3>
+							<h3 class="catalog__item-title"><a href="#">Морской круиз в <span>Анапу</span></a></h3>
 							<p><b>Маршрут:</b> Сочи-Лазаревское- Геленджик-Анапа</p>
 							<p><b>Продолжительность:</b> 10 ч. 0 мин.</p>
 							<p class="catalog__item-price">49 000 руб.</p>
 						</div>
 					</li>
-					<div class="col-6">
+					<div class="">
 						<li class="catalog__item catalog__item--action">
-							<img src="img/catalog/sochi.jpg" alt="Сочи">
+							<div class="catalog__item-img">
+								<img src="img/catalog/sochi.jpg" alt="Сочи">
+							</div>	
 							<div class="catalog__item-content">
-								<h3 class="catalog__item-title"><a href="#">Обзорная морская прогулка с экскурсией</a></h3>
+								<h3 class="catalog__item-title"><a href="#">Обзорная морская прогулка с <span>экскурсией</span></a></h3>
 								<p><b>Маршрут:</b> Сочи-Адлер-Сочи (без высадки)</p>
 								<p><b>Продолжительность:</b> 1 ч. 0 мин.</p>
 								<p class="catalog__item-price">5 000 руб. 
@@ -107,9 +113,11 @@
 							</div>
 						</li>
 						<li class="catalog__item catalog__item--discount">
-							<img src="img/catalog/gelendzhik.jpg" alt="Геленджик">
+							<div class="catalog__item-img">
+								<img src="img/catalog/gelendzhik.jpg" alt="Геленджик">
+							</div>
 							<div class="catalog__item-content">
-								<h3 class="catalog__item-title"><a href="#">Морская прогулка в Геленджик</a></h3>
+								<h3 class="catalog__item-title"><a href="#">Морская прогулка в <span>Геленджик</span></a></h3>
 								<p><b>Маршрут:</b> Сочи-Туапсе-Геленджик</p>
 								<p><b>Продолжительность:</b> 12 ч. 30 мин.</p>
 								<p class="catalog__item-price">7 000 руб. 
@@ -121,18 +129,22 @@
 				</ul>
 				<ul class="catalog__list">
 					<li class="catalog__item">
+						<div class="catalog__item-img">
 							<img src="img/catalog/novorossiysk.jpg" alt="Новороссийск">
+						</div>
 							<div class="catalog__item-content">
-								<h3 class="catalog__item-title"><a href="#">Морской круиз в Новороссийск</a></h3>
+								<h3 class="catalog__item-title"><a href="#">Морской круиз в <span>Новороссийск</span></a></h3>
 								<p><b>Маршрут:</b> Сочи-Геленджик-Новороссйиск-Геленджик-Сочи</p>
 								<p><b>Продолжительность:</b> 13 ч. 00 мин.</p>
 								<p class="catalog__item-price">14 800 руб.</p>
 							</div>
 						</li>
 						<li class="catalog__item">
-							<img src="img/catalog/sea.jpg" alt="Абрау-Дюрсо">
+							<div class="catalog__item-img">
+								<img src="img/catalog/sea-big.jpg" alt="Абрау-Дюрсо">
+							</div>
 							<div class="catalog__item-content">
-								<h3 class="catalog__item-title"><a href="" class="catalog__card--abrau">Морская прогулка в Абрау-Дюрсо</a></h3>
+								<h3 class="catalog__item-title"><a href="" class="catalog__card--abrau">Морская прогулка в Абрау-<span>Дюрсо</span></a></h3>
 								<p><b>Маршрут:</b> Сочи-Абрау-Дюрсо</p>
 								<p><b>Продолжительность:</b> 11 ч. 00 мин.</p>
 								<p class="catalog__item-price">14 800 руб.</p>
@@ -235,41 +247,9 @@
 		<button class="modal-close" type="button">Закрыть</button>
 	</section>
 
-	<script src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="slick/slick.min.js"></script>
 
-	<script>
-		$(document).ready(function(){
-			$('.main-menu__link').click(function(){
-				$('.main-menu__list').toggleClass('main-menu--active');
-			});
-
-			$('.catalog__card--abrau').click(function(event){
-				event.preventDefault();
-				$('.modal').removeClass('visually-hidden');
-					$('.slider-top').slick({
-				  slidesToShow: 1,
-				  slidesToScroll: 1,
-				  arrows: false,
-				  fade: true,
-				  asNavFor: '.slider-nav'
-				});
-				$('.slider-nav').slick({
-				  slidesToShow: 4,
-				  slidesToScroll: 1,
-				  asNavFor: '.slider-top',
-				  arrows: true,
-				  centerMode: true,
-				  focusOnSelect: true
-				});
-			});
-
-			$('.modal-close').click(function(){
-				$('.modal').addClass('visually-hidden');
-			});
-
-			
-		});
-	</script>
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

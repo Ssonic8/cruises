@@ -1,7 +1,7 @@
 .catalog
 	&__title
 	 text-align: center
-	 margin-top: 110px
+	 padding-top: 110px
 	 margin-bottom: 30px
 	 & h2
 	 	margin-bottom: 0
@@ -39,36 +39,62 @@
 	 position: relative
 	 margin-bottom: 20px
 	 background-color: #fff
-	 max-width: 555px
-		& img
-		 width: 100%
-		 height: auto
+	 width: 555px
+	 &-img
+	  position: relative
+		 overflow: hidden
+		 height: 215px
+		 & img
+		  width: 100%
+		  position: absolute
+		  bottom: 0
+		&--hit .catalog__item-img
+		 position: relative
+		 overflow: hidden
+		 height: 438px
+		 & img
+		  width: 100%
+		  position: absolute
+		 
+		&--action .catalog__item-img,
+		&--discount .catalog__item-img
+		 position: relative
+		 overflow: hidden
+		 height: 113px
+		 & img
+		  width: 100%
+		  position: absolute
+		  top: -150px
 	 &-content
 	  margin-left: 35px
 	  & p
 			 margin: 0
 	 &-title
 	  margin: 0
+	  margin-top: 25px
+   margin-bottom: 10px
 	  font-family: 'Roboto Slab', serif
 	  font-size: 18px
 	  font-weight: 400
-	  line-height: 48px
+	  line-height: 22px
 	  & a
 	   position: relative
 	   display: inline-block
 	   color: #00a2dd
 	   padding-right: 20px
-	   &::after
-	    border: medium solid transparent
-			  content: ''
-			  bottom: 18px
-			  right: -5px
-			  position: absolute
-			  height: 0
-			  width: 0
-			  border-color: transparent transparent transparent #00a2dd
-			  border-width: 4px
-			  margin-left: -4px		
+	   & span
+	    position: relative
+		   &::after
+		    border: medium solid transparent
+				  content: ''
+				  bottom: 7px
+				  right: -16px
+				  position: absolute
+				  height: 0
+				  width: 0
+				  border-color: transparent transparent transparent #00a2dd
+				  border-width: 4px
+				  margin-left: -4px		
 	 &-price
 	  padding-top: 20px
 	  padding-bottom: 10px
@@ -86,41 +112,41 @@
 	  content: 'Хит продаж'
 	  text-align: center
 	  padding-top: 20px
-	  color: rgba(255, 255, 255, 0.8)
+	  color: rgba(255, 255, 255, 0.9)
 	  text-transform: uppercase
 	  width: 89px
 	  height: 101px
 	  top: -7px
-	  right: 45px
+	  right: 8%
 	  background: url('../img/catalog/tag-hit.png') 0 0 no-repeat
+	  
 		&--action::after
 	  position: absolute
 	  content: 'Акция'
 	  text-align: center
 	  padding-top: 30px
-	  color: rgba(255, 255, 255, 0.8)
+	  color: rgba(255, 255, 255, 0.9)
 	  text-transform: uppercase
 	  width: 89px
 	  height: 101px
 	  top: -7px
-	  right: 45px
+	  right: 8%
 	  background: url('../img/catalog/tag-action.png') 0 0 no-repeat
 	 &--discount::after
 	  position: absolute
 	  content: 'Скидка 10%'
 	  text-align: center
 	  padding-top: 20px
-	  color: rgba(255, 255, 255, 0.8)
+	  color: rgba(255, 255, 255, 0.9)
 	  text-transform: uppercase
 	  width: 89px
 	  height: 101px
 	  top: -7px
-	  right: 45px
+	  right: 8%
 	  background: url('../img/catalog/tag-discount.png') 0 0 no-repeat
 	&__button
 	 text-align: center
 	 margin-bottom: 60px
-	 padding-left: 20px
 	 & a
 	  position: relative	
 	  display: inline-block

@@ -1,6 +1,6 @@
 .page-header
 	background: #fff url(../img/header/header-bg.jpg) center no-repeat
-	background-size: auto 100%
+	background-size: cover
 	
 	&__logo
 	 margin-top: 20px
@@ -50,7 +50,8 @@
 	 padding: 60px 120px 60px 50px
 	 background-color: #0d3351
 	 transition: all 0.5s
-	 left: -100vw
+	 left: -200vw
+	 z-index: 1
 	&--active
 	 left: 0
 	&__item
@@ -64,11 +65,10 @@
 	   color: #fff
 	&__link
 		display: block
-		padding-top: 34px
-		padding-bottom: 14px
+		padding: auto 0
 	 img
 	  width: 22px
-		 height: 16px
+		height: 16px
 .user-menu
 	position: relative
 	display: flex
